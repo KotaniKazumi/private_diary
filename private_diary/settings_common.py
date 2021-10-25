@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'django_ses',
 ]
 
 MIDDLEWARE = [
@@ -208,3 +209,6 @@ ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
 DEFAULT_FROM_EMAIL = 'ksys@kkotani.net'
 
 MEDIA_URL = '/media/'
+
+BACKUP_PATH = 'backup/'
+NUM_SAVED_BACKUP = 30
