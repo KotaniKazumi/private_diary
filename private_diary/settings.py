@@ -10,7 +10,13 @@ MEDIA_ROOT = '/usr/share/nginx/html/media'
 
 AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
 AWS_SES_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
-EMAIL_BACKEND = 'django_ses.SESBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'ksys@kkotani.net'
+EMAIL_HOST = 'kkotani.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'ksys@kkotani.net'
+EMAIL_HOST_PASSWORD = 'kotani0721'
+EMAIL_USE_TLS = False
 
 LOGGING = {
     'version': 1,
